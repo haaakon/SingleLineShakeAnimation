@@ -24,7 +24,7 @@ import SingleLineShakeAnimation
 ```swift
 button.shake(.Horizontal)
 ```
-Using thes default values, 5 times back and forth, animating for 0.5 seconds.
+Using the default values, 5 times back and forth, animating for 0.5 seconds.
 
 
 ### Example

@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "SingleLineShakeAnimation"
-  s.version          = "0.0.2"
+  s.version          = "0.0.3"
   s.summary          = "Shake a view with a single line of code with a non-intrusive extension for UIView, written in Swift."
   s.description      = <<-DESC
                       With this non-intrusive UIView extension, your UIView subclasses can get shaking with very little code.

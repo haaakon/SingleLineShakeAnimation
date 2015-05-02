@@ -13,7 +13,7 @@
 		EC1AE2D51AEA3CA7006A94F0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC1AE2D41AEA3CA7006A94F0 /* Images.xcassets */; };
 		EC1AE2D81AEA3CA7006A94F0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC1AE2D61AEA3CA7006A94F0 /* LaunchScreen.xib */; };
 		EC1AE2E41AEA3CA7006A94F0 /* SingleLineShakeAnimationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1AE2E31AEA3CA7006A94F0 /* SingleLineShakeAnimationTests.swift */; };
-		EC1AE2EE1AEA3CBC006A94F0 /* UIView+Shake.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1AE2ED1AEA3CBC006A94F0 /* UIView+Shake.swift */; };
+		ECB424FA1AF5097000CB8E52 /* UIView+Shake.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB424F91AF5097000CB8E52 /* UIView+Shake.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,17 +27,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		EC1AE2C81AEA3CA7006A94F0 /* SingleLineShakeAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SingleLineShakeAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC1AE2C81AEA3CA7006A94F0 /* SingleLineShakeAnimationExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SingleLineShakeAnimationExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC1AE2CC1AEA3CA7006A94F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EC1AE2CD1AEA3CA7006A94F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EC1AE2CF1AEA3CA7006A94F0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EC1AE2D21AEA3CA7006A94F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EC1AE2D41AEA3CA7006A94F0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		EC1AE2D71AEA3CA7006A94F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		EC1AE2DD1AEA3CA7006A94F0 /* SingleLineShakeAnimationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SingleLineShakeAnimationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC1AE2DD1AEA3CA7006A94F0 /* SingleLineShakeAnimationExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SingleLineShakeAnimationExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC1AE2E21AEA3CA7006A94F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EC1AE2E31AEA3CA7006A94F0 /* SingleLineShakeAnimationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleLineShakeAnimationTests.swift; sourceTree = "<group>"; };
-		EC1AE2ED1AEA3CBC006A94F0 /* UIView+Shake.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Shake.swift"; sourceTree = "<group>"; };
+		ECB424F91AF5097000CB8E52 /* UIView+Shake.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Shake.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,7 +61,8 @@
 		EC1AE2BF1AEA3CA7006A94F0 = {
 			isa = PBXGroup;
 			children = (
-				EC1AE2CA1AEA3CA7006A94F0 /* SingleLineShakeAnimation */,
+				ECB424F91AF5097000CB8E52 /* UIView+Shake.swift */,
+				EC1AE2CA1AEA3CA7006A94F0 /* SingleLineShakeAnimationExample */,
 				EC1AE2E01AEA3CA7006A94F0 /* SingleLineShakeAnimationTests */,
 				EC1AE2C91AEA3CA7006A94F0 /* Products */,
 			);
@@ -70,23 +71,23 @@
 		EC1AE2C91AEA3CA7006A94F0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				EC1AE2C81AEA3CA7006A94F0 /* SingleLineShakeAnimation.app */,
-				EC1AE2DD1AEA3CA7006A94F0 /* SingleLineShakeAnimationTests.xctest */,
+				EC1AE2C81AEA3CA7006A94F0 /* SingleLineShakeAnimationExample.app */,
+				EC1AE2DD1AEA3CA7006A94F0 /* SingleLineShakeAnimationExampleTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		EC1AE2CA1AEA3CA7006A94F0 /* SingleLineShakeAnimation */ = {
+		EC1AE2CA1AEA3CA7006A94F0 /* SingleLineShakeAnimationExample */ = {
 			isa = PBXGroup;
 			children = (
 				EC1AE2CD1AEA3CA7006A94F0 /* AppDelegate.swift */,
 				EC1AE2CF1AEA3CA7006A94F0 /* ViewController.swift */,
-				EC1AE2ED1AEA3CBC006A94F0 /* UIView+Shake.swift */,
 				EC1AE2D11AEA3CA7006A94F0 /* Main.storyboard */,
 				EC1AE2D41AEA3CA7006A94F0 /* Images.xcassets */,
 				EC1AE2D61AEA3CA7006A94F0 /* LaunchScreen.xib */,
 				EC1AE2CB1AEA3CA7006A94F0 /* Supporting Files */,
 			);
+			name = SingleLineShakeAnimationExample;
 			path = SingleLineShakeAnimation;
 			sourceTree = "<group>";
 		};
@@ -118,9 +119,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		EC1AE2C71AEA3CA7006A94F0 /* SingleLineShakeAnimation */ = {
+		EC1AE2C71AEA3CA7006A94F0 /* SingleLineShakeAnimationExample */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EC1AE2E71AEA3CA7006A94F0 /* Build configuration list for PBXNativeTarget "SingleLineShakeAnimation" */;
+			buildConfigurationList = EC1AE2E71AEA3CA7006A94F0 /* Build configuration list for PBXNativeTarget "SingleLineShakeAnimationExample" */;
 			buildPhases = (
 				EC1AE2C41AEA3CA7006A94F0 /* Sources */,
 				EC1AE2C51AEA3CA7006A94F0 /* Frameworks */,
@@ -130,14 +131,14 @@
 			);
 			dependencies = (
 			);
-			name = SingleLineShakeAnimation;
+			name = SingleLineShakeAnimationExample;
 			productName = SingleLineShakeAnimation;
-			productReference = EC1AE2C81AEA3CA7006A94F0 /* SingleLineShakeAnimation.app */;
+			productReference = EC1AE2C81AEA3CA7006A94F0 /* SingleLineShakeAnimationExample.app */;
 			productType = "com.apple.product-type.application";
 		};
-		EC1AE2DC1AEA3CA7006A94F0 /* SingleLineShakeAnimationTests */ = {
+		EC1AE2DC1AEA3CA7006A94F0 /* SingleLineShakeAnimationExampleTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EC1AE2EA1AEA3CA7006A94F0 /* Build configuration list for PBXNativeTarget "SingleLineShakeAnimationTests" */;
+			buildConfigurationList = EC1AE2EA1AEA3CA7006A94F0 /* Build configuration list for PBXNativeTarget "SingleLineShakeAnimationExampleTests" */;
 			buildPhases = (
 				EC1AE2D91AEA3CA7006A94F0 /* Sources */,
 				EC1AE2DA1AEA3CA7006A94F0 /* Frameworks */,
@@ -148,9 +149,9 @@
 			dependencies = (
 				EC1AE2DF1AEA3CA7006A94F0 /* PBXTargetDependency */,
 			);
-			name = SingleLineShakeAnimationTests;
+			name = SingleLineShakeAnimationExampleTests;
 			productName = SingleLineShakeAnimationTests;
-			productReference = EC1AE2DD1AEA3CA7006A94F0 /* SingleLineShakeAnimationTests.xctest */;
+			productReference = EC1AE2DD1AEA3CA7006A94F0 /* SingleLineShakeAnimationExampleTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -171,7 +172,7 @@
 					};
 				};
 			};
-			buildConfigurationList = EC1AE2C31AEA3CA7006A94F0 /* Build configuration list for PBXProject "SingleLineShakeAnimation" */;
+			buildConfigurationList = EC1AE2C31AEA3CA7006A94F0 /* Build configuration list for PBXProject "SingleLineShakeAnimationExample" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -184,8 +185,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				EC1AE2C71AEA3CA7006A94F0 /* SingleLineShakeAnimation */,
-				EC1AE2DC1AEA3CA7006A94F0 /* SingleLineShakeAnimationTests */,
+				EC1AE2C71AEA3CA7006A94F0 /* SingleLineShakeAnimationExample */,
+				EC1AE2DC1AEA3CA7006A94F0 /* SingleLineShakeAnimationExampleTests */,
 			);
 		};
 /* End PBXProject section */
@@ -215,7 +216,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC1AE2EE1AEA3CBC006A94F0 /* UIView+Shake.swift in Sources */,
+				ECB424FA1AF5097000CB8E52 /* UIView+Shake.swift in Sources */,
 				EC1AE2D01AEA3CA7006A94F0 /* ViewController.swift in Sources */,
 				EC1AE2CE1AEA3CA7006A94F0 /* AppDelegate.swift in Sources */,
 			);
@@ -234,7 +235,7 @@
 /* Begin PBXTargetDependency section */
 		EC1AE2DF1AEA3CA7006A94F0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = EC1AE2C71AEA3CA7006A94F0 /* SingleLineShakeAnimation */;
+			target = EC1AE2C71AEA3CA7006A94F0 /* SingleLineShakeAnimationExample */;
 			targetProxy = EC1AE2DE1AEA3CA7006A94F0 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -349,7 +350,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = SingleLineShakeAnimation/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = SingleLineShakeAnimationExample;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -361,7 +362,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = SingleLineShakeAnimation/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = SingleLineShakeAnimationExample;
 			};
 			name = Release;
 		};
@@ -379,7 +380,7 @@
 				);
 				INFOPLIST_FILE = SingleLineShakeAnimationTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = SingleLineShakeAnimationExampleTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SingleLineShakeAnimation.app/SingleLineShakeAnimation";
 			};
 			name = Debug;
@@ -394,7 +395,7 @@
 				);
 				INFOPLIST_FILE = SingleLineShakeAnimationTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = SingleLineShakeAnimationExampleTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SingleLineShakeAnimation.app/SingleLineShakeAnimation";
 			};
 			name = Release;
@@ -402,7 +403,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		EC1AE2C31AEA3CA7006A94F0 /* Build configuration list for PBXProject "SingleLineShakeAnimation" */ = {
+		EC1AE2C31AEA3CA7006A94F0 /* Build configuration list for PBXProject "SingleLineShakeAnimationExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EC1AE2E51AEA3CA7006A94F0 /* Debug */,
@@ -411,21 +412,23 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EC1AE2E71AEA3CA7006A94F0 /* Build configuration list for PBXNativeTarget "SingleLineShakeAnimation" */ = {
+		EC1AE2E71AEA3CA7006A94F0 /* Build configuration list for PBXNativeTarget "SingleLineShakeAnimationExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EC1AE2E81AEA3CA7006A94F0 /* Debug */,
 				EC1AE2E91AEA3CA7006A94F0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		EC1AE2EA1AEA3CA7006A94F0 /* Build configuration list for PBXNativeTarget "SingleLineShakeAnimationTests" */ = {
+		EC1AE2EA1AEA3CA7006A94F0 /* Build configuration list for PBXNativeTarget "SingleLineShakeAnimationExampleTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EC1AE2EB1AEA3CA7006A94F0 /* Debug */,
 				EC1AE2EC1AEA3CA7006A94F0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

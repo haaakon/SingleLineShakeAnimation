@@ -34,6 +34,20 @@
                ReferencedContainer = "container:SingleLineShakeAnimation.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "EC1AE2C71AEA3CA7006A94F0"
+               BuildableName = "SingleLineShakeAnimationExample.app"
+               BlueprintName = "SingleLineShakeAnimationExample"
+               ReferencedContainer = "container:SingleLineShakeAnimationExample.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -77,9 +91,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "EC1AE2C71AEA3CA7006A94F0"
-            BuildableName = "SingleLineShakeAnimation.app"
-            BlueprintName = "SingleLineShakeAnimation"
-            ReferencedContainer = "container:SingleLineShakeAnimation.xcodeproj">
+            BuildableName = "SingleLineShakeAnimationExample.app"
+            BlueprintName = "SingleLineShakeAnimationExample"
+            ReferencedContainer = "container:SingleLineShakeAnimationExample.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>

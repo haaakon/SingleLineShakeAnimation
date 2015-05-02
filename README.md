@@ -34,6 +34,13 @@ button.shake(.Horizontal, numberOfTimes: 10, totalDuration: 0.6, completion: { (
         })
 ```
 
+## Author
+
+Håkon Bogen, hakon.bogen@gmail.com
+
+## License
+
+SingleLineShakeAnimation is available under the MIT license. See the LICENSE file for more info.
 
 
 

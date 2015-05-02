@@ -11,17 +11,12 @@ Using the default values for duration and number of times shaking
 sender.shake(.Horizontal)
 ```
 
-
 ### Example
 ![Resize Example](https://raw.githubusercontent.com/haaakon/SingleLineShakeAnimation/master/example.gif)
 
 
 Customized usage
 =====
-Using the default values for duration and number of times shaking
-```swift
-sender.shake(.Horizontal)
-```
 
 With completion block 
 ```swift

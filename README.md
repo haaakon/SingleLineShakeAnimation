@@ -6,7 +6,7 @@ Shaking can be useful to indicate an important action your user needs to perform
                       
 [![Version](https://img.shields.io/cocoapods/v/SingleLineShakeAnimation.svg?style=flat)](http://cocoadocs.org/docsets/SingleLineShakeAnimation)
 [![License](https://img.shields.io/cocoapods/l/SingleLineShakeAnimation.svg?style=flat)](http://cocoadocs.org/docsets/SingleLineShakeAnimation)
-[![Platform](https://img.shields.io/cocoapods/p/SingleLinShakeAnimation.svg?style=flat)](http://cocoadocs.org/docsets/SingleLineShakeAnimation)
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/haaakon/SingleLineShakeAnimation)
 
 ## Installation
 ```ruby

@@ -9,7 +9,7 @@
 import UIKit
 
 
-enum ShakeDirection : Int {
+public enum ShakeDirection : Int {
     case Horizontal
     case Vertical
 
@@ -36,7 +36,7 @@ extension UIView {
     :param: totalDuration Total duration to do the shakes, default is 0.5 seconds
     :param: completion    Optional completion closure
     */
-    func shake(direction: ShakeDirection, numberOfTimes: Int = 5, totalDuration : Float = 0.5, completion: (() -> Void)? = nil) {
+    public func shake(direction: ShakeDirection, numberOfTimes: Int = 5, totalDuration : Float = 0.5, completion: (() -> Void)? = nil) {
         let timePerShake = Double(totalDuration) / Double(numberOfTimes)
         shake(forTimes: numberOfTimes, position: direction.startPosition(), durationPerShake: timePerShake, completion: completion)
     }

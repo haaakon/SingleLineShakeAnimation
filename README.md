@@ -24,13 +24,8 @@ import SingleLineShakeAnimation
 ```swift
 button.shake(.Horizontal)
 ```
-Using these default values
-```swift
-private struct DefaultValues {
-    static let numberOfTimes = 5
-    static let totalDuration : Float = 0.5
-}
-```
+Using thes default values, 5 times back and forth, animating over 0.5 seconds.
+
 
 ### Example
 ![Resize Example](https://raw.githubusercontent.com/haaakon/SingleLineShakeAnimation/master/example.gif)

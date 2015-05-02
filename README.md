@@ -20,9 +20,13 @@ Usage
 import SingleLineShakeAnimation
 ```
 
-##### Basic horizontal shake.
+##### Basic horizontal shake
 ```swift
 button.shake(.Horizontal)
+```
+##### Basic vertical shake
+```swift
+button.shake(.Vertical)
 ```
 Using the default values, 5 times back and forth, animating for 0.5 seconds.
 

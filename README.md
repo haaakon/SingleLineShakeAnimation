@@ -12,16 +12,24 @@ Shaking can be useful to indicate an important action your user needs to perform
 ```ruby
 pod "SingleLineShakeAnimation"
 ```
-In any swift file:
+
+Usage
+=====
+#### import library 
 ```swift
 import SingleLineShakeAnimation
 ```
 
-Usage
-=====
-Using the default values for duration and number of times shaking
+##### Basic horizontal shake.
 ```swift
 button.shake(.Horizontal)
+```
+Using these default values
+```swift
+private struct DefaultValues {
+    static let numberOfTimes = 5
+    static let totalDuration : Float = 0.5
+}
 ```
 
 ### Example
@@ -30,10 +38,9 @@ button.shake(.Horizontal)
 
 Customized usage
 =====
-
-With completion block
+Vertical shake with completion block.
 ```swift
-button.shake(.Horizontal, completion: { () -> Void in
+button.shake(.Vertical, completion: { () -> Void in
             // do something after animation finishes
         })
 ```

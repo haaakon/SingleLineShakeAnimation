@@ -13,6 +13,7 @@
 		EC1AE2D51AEA3CA7006A94F0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC1AE2D41AEA3CA7006A94F0 /* Images.xcassets */; };
 		EC1AE2D81AEA3CA7006A94F0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC1AE2D61AEA3CA7006A94F0 /* LaunchScreen.xib */; };
 		EC1AE2E41AEA3CA7006A94F0 /* SingleLineShakeAnimationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1AE2E31AEA3CA7006A94F0 /* SingleLineShakeAnimationTests.swift */; };
+		EC1AE2EE1AEA3CBC006A94F0 /* UIView+Shake.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1AE2ED1AEA3CBC006A94F0 /* UIView+Shake.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		EC1AE2DD1AEA3CA7006A94F0 /* SingleLineShakeAnimationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SingleLineShakeAnimationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC1AE2E21AEA3CA7006A94F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EC1AE2E31AEA3CA7006A94F0 /* SingleLineShakeAnimationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleLineShakeAnimationTests.swift; sourceTree = "<group>"; };
+		EC1AE2ED1AEA3CBC006A94F0 /* UIView+Shake.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Shake.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 			children = (
 				EC1AE2CD1AEA3CA7006A94F0 /* AppDelegate.swift */,
 				EC1AE2CF1AEA3CA7006A94F0 /* ViewController.swift */,
+				EC1AE2ED1AEA3CBC006A94F0 /* UIView+Shake.swift */,
 				EC1AE2D11AEA3CA7006A94F0 /* Main.storyboard */,
 				EC1AE2D41AEA3CA7006A94F0 /* Images.xcassets */,
 				EC1AE2D61AEA3CA7006A94F0 /* LaunchScreen.xib */,
@@ -212,6 +215,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC1AE2EE1AEA3CBC006A94F0 /* UIView+Shake.swift in Sources */,
 				EC1AE2D01AEA3CA7006A94F0 /* ViewController.swift in Sources */,
 				EC1AE2CE1AEA3CA7006A94F0 /* AppDelegate.swift in Sources */,
 			);
@@ -342,9 +346,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = SingleLineShakeAnimation/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -352,6 +358,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = SingleLineShakeAnimation/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";

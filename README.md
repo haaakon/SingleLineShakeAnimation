@@ -58,3 +58,8 @@ Håkon Bogen, hakon.bogen@gmail.com
 ## License
 
 SingleLineShakeAnimation is available under the MIT license. See the LICENSE file for more info.
+
+## Single Line APIs
+Really good APIs should not need more than a single line of code to work and be as non intrusive as possible. This library is a part of my ongoing effort to build single line libraries for iOS. Check out the other ones on the list as well.
+- [SingleLineShakeAnimation](https://github.com/haaakon/SingleLineShakeAnimation)
+- [SingleLineKeyboardResize](https://github.com/haaakon/SingleLineKeyboardResize)

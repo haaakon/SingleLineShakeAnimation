@@ -39,14 +39,14 @@ Customized usage
 =====
 Vertical shake with completion block.
 ```swift
-button.shake(.Vertical, completion: { () -> Void in
+button.shake(.Vertical, completion: { 
             // do something after animation finishes
         })
 ```
 
 Stating number of times to go back and forth and total duration for the whole animation to take.
 ```swift
-button.shake(.Horizontal, numberOfTimes: 10, totalDuration: 0.6, completion: { () -> Void in
+button.shake(.Horizontal, numberOfTimes: 10, totalDuration: 0.6, completion: {
             // do something after animation finishes
         })
 ```

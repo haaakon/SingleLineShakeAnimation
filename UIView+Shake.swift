@@ -41,9 +41,14 @@ extension UIView {
     :param: totalDuration Total duration to do the shakes, default is 0.5 seconds
     :param: completion    Optional completion closure
     */
-    public func shake(direction: ShakeDirection, numberOfTimes: Int = DefaultValues.numberOfTimes, totalDuration : Float = DefaultValues.totalDuration, completion: (() -> Void)? = nil) {
+    public func shake(direction: ShakeDirection, numberOfTimes: Int = DefaultValues.numberOfTimes, totalDuration : Float = DefaultValues.totalDuration, completion: (() -> Void)? = nil) -> UIView {
         let timePerShake = Double(totalDuration) / Double(numberOfTimes)
         shake(forTimes: numberOfTimes, position: direction.startPosition(), durationPerShake: timePerShake, completion: completion)
+        return self
+    }
+
+    public func postAccessabilityNotification(#text : String ) {
+        UIAccessibilityPostNotification(UIAccessibilityAnnouncementNotification, text)
     }
 
     private func shake(#forTimes: Int, position: ShakePosition, durationPerShake: NSTimeInterval, completion: (() -> Void)?) {

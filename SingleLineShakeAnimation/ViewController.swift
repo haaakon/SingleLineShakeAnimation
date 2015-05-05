@@ -22,6 +22,7 @@ class ViewController: UIViewController {
             numberOfShakesLabel.text = "\(shakes)"
         }
     }
+    
     var numberOfSeconds : Float = 1.1 {
         didSet(seconds) {
             let numberFormatter = NSNumberFormatter()

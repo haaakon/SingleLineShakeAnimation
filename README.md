@@ -30,7 +30,7 @@ button.shake(.Horizontal)
 button.shake(.Vertical)
 ```
 Using the default values, 5 times back and forth, animating for 0.5 seconds.
-
+--------
 ##### Basic vertical shake with accessability
 ```swift
 usernameTextField.shake(.Vertical)?.postAccessabilityNotification(text:"You need to write a username before tapping login button")

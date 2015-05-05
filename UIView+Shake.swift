@@ -41,9 +41,36 @@ extension UIView {
     :param: totalDuration Total duration to do the shakes, default is 0.5 seconds
     :param: completion    Optional completion closure
     */
-    public func shake(direction: ShakeDirection, numberOfTimes: Int = DefaultValues.numberOfTimes, totalDuration : Float = DefaultValues.totalDuration, completion: (() -> Void)? = nil) {
-        let timePerShake = Double(totalDuration) / Double(numberOfTimes)
-        shake(forTimes: numberOfTimes, position: direction.startPosition(), durationPerShake: timePerShake, completion: completion)
+    public func shake(direction: ShakeDirection, numberOfTimes: Int = DefaultValues.numberOfTimes, totalDuration : Float = DefaultValues.totalDuration, completion: (() -> Void)? = nil) -> UIView? {
+        if UIAccessibilityIsVoiceOverRunning() {
+            return self
+        } else {
+            let timePerShake = Double(totalDuration) / Double(numberOfTimes)
+            shake(forTimes: numberOfTimes, position: direction.startPosition(), durationPerShake: timePerShake, completion: completion)
+            return nil
+        }
+
+    }
+
+    public func postAccessabilityNotification(#text : String ) {
+        var hasRead = false
+        NSNotificationCenter.defaultCenter().addObserverForName(UIAccessibilityAnnouncementDidFinishNotification, object: nil , queue: nil) { (notification) -> Void in
+            if hasRead == false {
+                UIAccessibilityPostNotification(UIAccessibilityAnnouncementNotification, text)
+                hasRead = true
+                NSNotificationCenter.defaultCenter().removeObserver(self, name: UIAccessibilityAnnouncementDidFinishNotification, object:nil)
+            }
+        }
+        // seems to be a bug with UIAccessability that does not allow to post a notification with text in the action when tapping a button
+        dispatch(after:0.01) {
+            UIAccessibilityPostNotification(UIAccessibilityAnnouncementNotification, " ")
+        }
+    }
+
+    func didFinishReadingAccessabilityLabel() {
+        dispatch_async(dispatch_get_main_queue(), {
+            UIAccessibilityPostNotification(UIAccessibilityAnnouncementNotification, "hello world")
+        })
     }
 
     private func shake(#forTimes: Int, position: ShakePosition, durationPerShake: NSTimeInterval, completion: (() -> Void)?) {
@@ -70,6 +97,15 @@ extension UIView {
         }
     }
 
+}
+
+func dispatch(#after: NSTimeInterval, closure: dispatch_block_t) {
+    dispatch(after: after, closure: closure)
+}
+
+func dispatch(#after: NSTimeInterval, queue: dispatch_queue_t = dispatch_get_main_queue(), #closure: dispatch_block_t) {
+    let time = dispatch_time(DISPATCH_TIME_NOW, Int64(after) * Int64(NSEC_PER_SEC))
+    dispatch_after(time, dispatch_get_main_queue(), closure)
 }
 
 private struct ShakePosition  {

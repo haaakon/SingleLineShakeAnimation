@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EC11A00B1AF93A5C0097274C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EC11A00A1AF93A5C0097274C /* Localizable.strings */; };
+		EC11A00C1AF93A5C0097274C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EC11A00A1AF93A5C0097274C /* Localizable.strings */; };
 		EC1AE2CE1AEA3CA7006A94F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1AE2CD1AEA3CA7006A94F0 /* AppDelegate.swift */; };
 		EC1AE2D01AEA3CA7006A94F0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1AE2CF1AEA3CA7006A94F0 /* ViewController.swift */; };
 		EC1AE2D31AEA3CA7006A94F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC1AE2D11AEA3CA7006A94F0 /* Main.storyboard */; };
@@ -27,6 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EC11A00A1AF93A5C0097274C /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		EC1AE2C81AEA3CA7006A94F0 /* SingleLineShakeAnimationExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SingleLineShakeAnimationExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC1AE2CC1AEA3CA7006A94F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EC1AE2CD1AEA3CA7006A94F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -82,6 +85,7 @@
 			children = (
 				EC1AE2CD1AEA3CA7006A94F0 /* AppDelegate.swift */,
 				EC1AE2CF1AEA3CA7006A94F0 /* ViewController.swift */,
+				EC11A00A1AF93A5C0097274C /* Localizable.strings */,
 				EC1AE2D11AEA3CA7006A94F0 /* Main.storyboard */,
 				EC1AE2D41AEA3CA7006A94F0 /* Images.xcassets */,
 				EC1AE2D61AEA3CA7006A94F0 /* LaunchScreen.xib */,
@@ -197,6 +201,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC1AE2D31AEA3CA7006A94F0 /* Main.storyboard in Resources */,
+				EC11A00B1AF93A5C0097274C /* Localizable.strings in Resources */,
 				EC1AE2D81AEA3CA7006A94F0 /* LaunchScreen.xib in Resources */,
 				EC1AE2D51AEA3CA7006A94F0 /* Images.xcassets in Resources */,
 			);
@@ -206,6 +211,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC11A00C1AF93A5C0097274C /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

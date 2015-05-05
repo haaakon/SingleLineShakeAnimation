@@ -1,0 +1,10 @@
+/* 
+  Localizable.strings
+  SingleLineShakeAnimationExample
+
+  Created by Håkon Bogen on 05/05/15.
+  Copyright (c) 2015 haaakon. All rights reserved.
+*/
+
+// example text
+"shake accessability notification" = "You need to add recipients before sending";

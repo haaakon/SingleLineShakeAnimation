@@ -34,14 +34,13 @@ class ViewController: UIViewController {
 
     @IBAction func didTapShakeVerticallyButton(sender: UIButton) {
         println("shaking vertically for \(numberOfShakes) shakes in \(numberOfSeconds) seconds")
-        sender.shake(.Vertical, numberOfTimes: numberOfShakes, totalDuration: numberOfSeconds, completion: nil)
+        sender.shake(.Vertical, numberOfTimes: numberOfShakes, totalDuration: numberOfSeconds, completion: nil)?.postAccessabilityNotification(text: NSLocalizedString("shake accessability notification",  comment: "Inform the user that this view needs attention"))
     }
 
     @IBAction func didTapShakeHorizontallyButton(sender: UIButton) {
         println("shaking horizontally for \(numberOfShakes) shakes in \(numberOfSeconds) seconds")
         sender.shake(.Horizontal, numberOfTimes: numberOfShakes, totalDuration: numberOfSeconds, completion: nil)
     }
-
 
     override func viewDidLoad() {
         super.viewDidLoad()

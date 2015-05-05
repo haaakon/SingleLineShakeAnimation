@@ -51,6 +51,10 @@ button.shake(.Horizontal, numberOfTimes: 10, totalDuration: 0.6, completion: {
         })
 ```
 
+## TODO
+- Add support for accessability
+- Easing on animation
+
 ## Author
 
 Håkon Bogen, hakon.bogen@gmail.com

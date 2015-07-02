@@ -4,6 +4,23 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
     </dependencies>
     <scenes>
+        <!--Item-->
+        <scene sceneID="kPJ-3p-ihD">
+            <objects>
+                <navigationController id="BNs-cP-VUm" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="xOp-fq-7Dq"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="JUX-dF-WPu">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="svM-AP-eB8" kind="relationship" relationship="rootViewController" id="6u5-wq-jgH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RNG-IL-tYr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="885" y="1037"/>
+        </scene>
         <!--Item 2-->
         <scene sceneID="d7K-Q8-ByW">
             <objects>
@@ -18,15 +35,16 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 2" id="PWO-aj-hHU"/>
+                    <navigationItem key="navigationItem" id="jnH-Kk-DyG"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f7l-JZ-Esq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="974" y="1011"/>
+            <point key="canvasLocation" x="1565" y="1037"/>
         </scene>
         <!--Item 1-->
         <scene sceneID="EKy-Nz-UCq">
             <objects>
-                <viewController id="QzW-qF-DiZ" customClass="ViewController" customModule="SingleLineShakeAnimation" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="QzW-qF-DiZ" customClass="ViewController" customModule="SingleLineShakeAnimationExample" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="eWH-oF-Sda"/>
                         <viewControllerLayoutGuide type="bottom" id="fO4-Re-qy2"/>
@@ -166,7 +184,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="QzW-qF-DiZ" kind="relationship" relationship="viewControllers" id="BfR-MM-tfz"/>
-                        <segue destination="svM-AP-eB8" kind="relationship" relationship="viewControllers" id="bP3-dw-lyP"/>
+                        <segue destination="BNs-cP-VUm" kind="relationship" relationship="viewControllers" id="YeO-Hl-p2F"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vWg-F5-OdG" userLabel="First Responder" sceneMemberID="firstResponder"/>

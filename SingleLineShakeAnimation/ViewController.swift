@@ -34,6 +34,7 @@ class ViewController: UIViewController {
 
     @IBAction func didTapShakeVerticallyButton(sender: UIButton) {
         println("shaking vertically for \(numberOfShakes) shakes in \(numberOfSeconds) seconds")
+        sender.shake(.Vertical)?.postAccessabilityNotification(text: "Register user before logging in")
         sender.shake(.Vertical, numberOfTimes: numberOfShakes, totalDuration: numberOfSeconds, completion: nil)?.postAccessabilityNotification(text: NSLocalizedString("shake accessability notification",  comment: "Inform the user that this view needs attention"))
     }
 

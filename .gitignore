@@ -1,0 +1,30 @@
+#Xcode
+.DS_Store
+build/
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+*.xcworkspace
+!default.xcworkspace
+xcuserdata
+*.xccheckout
+profile
+*.moved-aside
+DerivedData
+*.hmap
+*.ipa
+.DS_Store
+# CocoaPods
+#Pods
+Pods/
+Podfile.lock
+*.orig
+.idea
+# Carthage
+Carthage/Build
+Carthage/Checkouts

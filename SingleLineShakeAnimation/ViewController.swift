@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var button : UIButton!
+    @IBOutlet weak var button: UIButton!
 
     @IBOutlet weak var numberOfSecondsSlider: UISlider!
     @IBOutlet weak var numberOfShakesSlider: UISlider!
@@ -23,7 +23,7 @@ class ViewController: UIViewController {
         }
     }
     
-    var numberOfSeconds : Float = 1.1 {
+    var numberOfSeconds: Float = 1.1 {
         didSet(seconds) {
             let numberFormatter = NSNumberFormatter()
             numberFormatter.maximumFractionDigits = 2
@@ -33,13 +33,13 @@ class ViewController: UIViewController {
     }
 
     @IBAction func didTapShakeVerticallyButton(sender: UIButton) {
-        println("shaking vertically for \(numberOfShakes) shakes in \(numberOfSeconds) seconds")
+        print("shaking vertically for \(numberOfShakes) shakes in \(numberOfSeconds) seconds")
         sender.shake(.Vertical)?.postAccessabilityNotification(text: "Register user before logging in")
         sender.shake(.Vertical, numberOfTimes: numberOfShakes, totalDuration: numberOfSeconds, completion: nil)?.postAccessabilityNotification(text: NSLocalizedString("shake accessability notification",  comment: "Inform the user that this view needs attention"))
     }
 
     @IBAction func didTapShakeHorizontallyButton(sender: UIButton) {
-        println("shaking horizontally for \(numberOfShakes) shakes in \(numberOfSeconds) seconds")
+        print("shaking horizontally for \(numberOfShakes) shakes in \(numberOfSeconds) seconds")
         sender.shake(.Horizontal, numberOfTimes: numberOfShakes, totalDuration: numberOfSeconds, completion: nil)?.postAccessabilityNotification(text: NSLocalizedString("shake accessability notification",  comment: "Inform the user that this view needs attention"))
     }
 

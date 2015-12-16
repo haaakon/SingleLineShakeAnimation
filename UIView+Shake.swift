@@ -8,8 +8,7 @@
 
 import UIKit
 
-
-public enum ShakeDirection : Int {
+public enum ShakeDirection: Int {
     case Horizontal
     case Vertical
 
@@ -23,10 +22,9 @@ public enum ShakeDirection : Int {
     }
 }
 
-
 private struct DefaultValues {
     static let numberOfTimes = 5
-    static let totalDuration : Float = 0.5
+    static let totalDuration: Float = 0.5
 }
 
 extension UIView {
@@ -36,12 +34,12 @@ extension UIView {
     If the total duration given is 1 second, and the number of shakes is 5, it will use 0.20 seconds per shake.
     After it's done shaking, the completion handler is called, if specified.
 
-    :param: direction     The direction to shake (horizontal or vertical motion)
-    :param: numberOfTimes The total number of times to shake back and forth, default value is 5
-    :param: totalDuration Total duration to do the shakes, default is 0.5 seconds
-    :param: completion    Optional completion closure
+    - parameter direction:     The direction to shake (horizontal or vertical motion)
+    - parameter numberOfTimes: The total number of times to shake back and forth, default value is 5
+    - parameter totalDuration: Total duration to do the shakes, default is 0.5 seconds
+    - parameter completion:    Optional completion closure
     */
-    public func shake(direction: ShakeDirection, numberOfTimes: Int = DefaultValues.numberOfTimes, totalDuration : Float = DefaultValues.totalDuration, completion: (() -> Void)? = nil) -> UIView? {
+    public func shake(direction: ShakeDirection, numberOfTimes: Int = DefaultValues.numberOfTimes, totalDuration: Float = DefaultValues.totalDuration, completion: (() -> Void)? = nil) -> UIView? {
         if UIAccessibilityIsVoiceOverRunning() {
             return self
         } else {
@@ -49,12 +47,11 @@ extension UIView {
             shake(forTimes: numberOfTimes, position: direction.startPosition(), durationPerShake: timePerShake, completion: completion)
             return nil
         }
-
     }
 
-    public func postAccessabilityNotification(#text : String ) {
+    public func postAccessabilityNotification(text text: String ) {
         var hasRead = false
-        NSNotificationCenter.defaultCenter().addObserverForName(UIAccessibilityAnnouncementDidFinishNotification, object: nil , queue: nil) { (notification) -> Void in
+        NSNotificationCenter.defaultCenter().addObserverForName(UIAccessibilityAnnouncementDidFinishNotification, object: nil, queue: nil) { (notification) -> Void in
             if hasRead == false {
                 UIAccessibilityPostNotification(UIAccessibilityAnnouncementNotification, text)
                 hasRead = true
@@ -62,7 +59,8 @@ extension UIView {
             }
         }
         // seems to be a bug with UIAccessability that does not allow to post a notification with text in the action when tapping a button
-        dispatch(after:0.01) {
+        let time = dispatch_time(DISPATCH_TIME_NOW, Int64(0.01 * Double(NSEC_PER_SEC)))
+        dispatch_after(time, dispatch_get_main_queue()) {
             UIAccessibilityPostNotification(UIAccessibilityAnnouncementNotification, " ")
         }
     }
@@ -73,7 +71,7 @@ extension UIView {
         })
     }
 
-    private func shake(#forTimes: Int, position: ShakePosition, durationPerShake: NSTimeInterval, completion: (() -> Void)?) {
+    private func shake(forTimes forTimes: Int, position: ShakePosition, durationPerShake: NSTimeInterval, completion: (() -> Void)?) {
         UIView.animateWithDuration(durationPerShake, animations: { () -> Void in
 
             switch position.direction {
@@ -99,52 +97,34 @@ extension UIView {
 
 }
 
-private func dispatch(#after: NSTimeInterval, closure: dispatch_block_t) {
-    dispatch(after: after, closure: closure)
-}
-
-private func dispatch(#after: NSTimeInterval, queue: dispatch_queue_t = dispatch_get_main_queue(), #closure: dispatch_block_t) {
-    let time = dispatch_time(DISPATCH_TIME_NOW, Int64(after) * Int64(NSEC_PER_SEC))
-    dispatch_after(time, dispatch_get_main_queue(), closure)
-}
-
 private struct ShakePosition  {
 
-    let value : CGFloat
-    let direction : ShakeDirection
+    let value: CGFloat
+    let direction: ShakeDirection
 
-    init(value: CGFloat, direction : ShakeDirection) {
+    init(value: CGFloat, direction: ShakeDirection) {
         self.value = value
         self.direction = direction
     }
-
 
     func oppositePosition() -> ShakePosition {
         return ShakePosition(value: (self.value * -1), direction: direction)
     }
 
-    static var Left : ShakePosition {
-        get {
-            return ShakePosition(value: 1, direction: .Horizontal)
-        }
+    static var Left: ShakePosition {
+        return ShakePosition(value: 1, direction: .Horizontal)
     }
 
-    static var Right : ShakePosition {
-        get {
-            return ShakePosition(value: -1, direction: .Horizontal)
-        }
+    static var Right: ShakePosition {
+        return ShakePosition(value: -1, direction: .Horizontal)
     }
 
-    static var Top : ShakePosition {
-        get {
-            return ShakePosition(value: 1, direction: .Vertical)
-        }
+    static var Top: ShakePosition {
+        return ShakePosition(value: 1, direction: .Vertical)
     }
 
-    static var Bottom : ShakePosition {
-        get {
-            return ShakePosition(value: -1, direction: .Vertical)
-        }
+    static var Bottom: ShakePosition {
+        return ShakePosition(value: -1, direction: .Vertical)
     }
+    
 }
-

@@ -22,6 +22,24 @@ public enum ShakeDirection: Int {
     }
 }
 
+public enum Vibration {
+    case Light
+    case Medium
+    case Heavy
+    
+    @available(iOS 10.0, *)
+    func hapticFeedback() -> UIImpactFeedbackGenerator {
+        switch self {
+        case .Heavy:
+            return UIImpactFeedbackGenerator(style: .heavy)
+        case .Medium:
+            return UIImpactFeedbackGenerator(style: .medium)
+        case .Light:
+            return UIImpactFeedbackGenerator(style: .light)
+        }
+    }
+}
+
 private struct DefaultValues {
     static let numberOfTimes = 5
     static let totalDuration: Float = 0.5
@@ -63,6 +81,11 @@ extension UIView {
         dispatch_after(time, dispatch_get_main_queue()) {
             UIAccessibilityPostNotification(UIAccessibilityAnnouncementNotification, " ")
         }
+    }
+    
+    @available(iOS 10.0, *)
+    public func withHapticVibration(_ intesity: Vibration) {
+        intesity.hapticFeedback().impactOccurred()
     }
 
     func didFinishReadingAccessabilityLabel() {

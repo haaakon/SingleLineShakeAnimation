@@ -1,10 +1,3 @@
-//
-//  ShakeModifier.swift
-//  SingleLineShakeAnimation
-//
-//  Created for SwiftUI support.
-//  Copyright (c) 2015 haaakon. All rights reserved.
-//
 
 import SwiftUI
 #if canImport(UIKit)

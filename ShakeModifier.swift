@@ -76,7 +76,7 @@ public struct ShakeModifier: ViewModifier {
         content
             .modifier(ShakeEffect(animatableData: CGFloat(trigger)))
             .animation(.default, value: trigger)
-            .onChange(of: trigger) { newValue in
+            .onChangeCompat(of: trigger) { newValue in
                 guard newValue != 0 else { return }
                 #if canImport(UIKit)
                 if UIAccessibility.isVoiceOverRunning, let announcement = accessibilityAnnouncement {
@@ -84,6 +84,19 @@ public struct ShakeModifier: ViewModifier {
                 }
                 #endif
             }
+    }
+}
+
+// MARK: - Compat helpers
+
+private extension View {
+    @ViewBuilder
+    func onChangeCompat<T: Equatable>(of value: T, perform: @escaping (T) -> Void) -> some View {
+        if #available(iOS 17, macOS 14, tvOS 17, watchOS 10, *) {
+            self.onChange(of: value) { _, newValue in perform(newValue) }
+        } else {
+            self.onChange(of: value, perform: perform)
+        }
     }
 }
 

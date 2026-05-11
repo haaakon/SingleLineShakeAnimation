@@ -58,6 +58,57 @@ button.shake(.Horizontal, numberOfTimes: 10, totalDuration: 0.6, completion: {
         })
 ```
 
+## SwiftUI
+
+`ShakeModifier` and the `.shake(trigger:)` View extension provide an idiomatic SwiftUI equivalent of the UIKit shake animation.
+
+#### import library
+```swift
+import SingleLineShakeAnimation
+```
+
+#### Basic shake — increment `trigger` to shake
+```swift
+TextField("Username", text: $username)
+    .shake(trigger: errorCount)
+```
+
+#### With a VoiceOver announcement
+When VoiceOver is active the shake still fires, and the announcement is posted as an additional context notification for screen-reader users.
+```swift
+TextField("Username", text: $username)
+    .shake(trigger: errorCount,
+           accessibilityAnnouncement: "Username field is required")
+```
+
+#### Using the modifier directly
+```swift
+myView
+    .modifier(ShakeModifier(trigger: errorCount))
+```
+
+#### Driving it from a button
+```swift
+struct LoginView: View {
+    @State private var errorCount = 0
+    @State private var username = ""
+
+    var body: some View {
+        VStack {
+            TextField("Username", text: $username)
+                .shake(trigger: errorCount,
+                       accessibilityAnnouncement: "Please enter your username")
+
+            Button("Log in") {
+                if username.isEmpty {
+                    errorCount += 1   // increments trigger → shakes the field
+                }
+            }
+        }
+    }
+}
+```
+
 ## TODO
 - Easing on animation
 

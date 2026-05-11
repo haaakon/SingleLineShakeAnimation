@@ -7,6 +7,9 @@
 //
 
 import SwiftUI
+#if canImport(UIKit)
+import UIKit
+#endif
 
 // MARK: - ShakeEffect
 
@@ -75,9 +78,11 @@ public struct ShakeModifier: ViewModifier {
             .animation(.default, value: trigger)
             .onChange(of: trigger) { newValue in
                 guard newValue != 0 else { return }
+                #if canImport(UIKit)
                 if UIAccessibility.isVoiceOverRunning, let announcement = accessibilityAnnouncement {
                     UIAccessibility.post(notification: .announcement, argument: announcement)
                 }
+                #endif
             }
     }
 }
